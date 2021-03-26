@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useFirebaseApp } from "reactfire";
 
 function App() {
+  const fireb = useFirebaseApp();
+  console.log(fireb);
   return (
     <div className="App">
       <header className="App-header">
