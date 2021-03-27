@@ -1,27 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useFirebaseApp } from "reactfire";
+import UserProfile from "./component/profile/userProfile";
+import Auth from "./component/auth/Auth";
+import Navigation from "./component/Navigation/navigation";
 
 function App() {
-  const fireb = useFirebaseApp();
-  console.log(fireb);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigation />
+      <div className="container">
+        <h1 className="display-1">Firebase + React </h1>
+        <UserProfile />
+        <Auth />
+      </div>
+    </>
   );
 }
 
